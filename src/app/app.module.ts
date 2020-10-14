@@ -9,21 +9,29 @@ import { ArtistaComponent } from './components/artista/artista.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 
 //import rutas 
-import {ROUTES} from './app.routes'  // 6 importar el ROUTES y ya  ES el fin de  la defincion de rutas para toda la  app, el siguiente paso , es en el app,component.html
+import {ROUTES} from './app.routes';
+// Pipes
+import { NoimagePipe } from './pipes/noimage.pipe';
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component'  // 6 importar el ROUTES y ya  ES el fin de  la defincion de rutas para toda la  app, el siguiente paso , es en el app,component.html
+// import { SpottifyService } from './services/spottify.service';
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     SearchComponent,
     ArtistaComponent,
-    NavbarComponent
+    NavbarComponent,
+    NoimagePipe,
+    TarjetasComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     RouterModule.forRoot(ROUTES, {useHash: true})  // 5  paso, colocar en los imports le RouterModule, y usar el forRoot, que usa como argumento el  array de rutas generado en el app.routes
   ],
-  providers: [],
+  providers: [
+    // SpottifyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
