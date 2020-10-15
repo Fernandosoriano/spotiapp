@@ -12,7 +12,8 @@ import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import {ROUTES} from './app.routes';
 // Pipes
 import { NoimagePipe } from './pipes/noimage.pipe';
-import { TarjetasComponent } from './components/tarjetas/tarjetas.component'  // 6 importar el ROUTES y ya  ES el fin de  la defincion de rutas para toda la  app, el siguiente paso , es en el app,component.html
+import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
+import { LoadingComponent } from './components/shared/loading/loading.component'  // 6 importar el ROUTES y ya  ES el fin de  la defincion de rutas para toda la  app, el siguiente paso , es en el app,component.html
 // import { SpottifyService } from './services/spottify.service';
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TarjetasComponent } from './components/tarjetas/tarjetas.component'  //
     ArtistaComponent,
     NavbarComponent,
     NoimagePipe,
-    TarjetasComponent
+    TarjetasComponent,
+    LoadingComponent
   ],
   imports: [
     BrowserModule,

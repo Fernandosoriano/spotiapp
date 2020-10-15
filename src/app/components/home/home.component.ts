@@ -8,11 +8,14 @@ import { SpottifyService } from 'src/app/services/spottify.service';
 })
 export class HomeComponent {
   nuevasCanciones: any[] = []
+  loading        : boolean;
 
   constructor(private spotify: SpottifyService) {
+    this.loading = true;
 
     this.spotify.getNewReleases().subscribe((data:any) =>{
       this.nuevasCanciones = data;
+      this.loading = false;
     });
     
    }
