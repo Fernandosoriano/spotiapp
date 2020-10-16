@@ -14,6 +14,7 @@ import {ROUTES} from './app.routes';
 import { NoimagePipe } from './pipes/noimage.pipe';
 import { TarjetasComponent } from './components/tarjetas/tarjetas.component';
 import { LoadingComponent } from './components/shared/loading/loading.component'  // 6 importar el ROUTES y ya  ES el fin de  la defincion de rutas para toda la  app, el siguiente paso , es en el app,component.html
+import { DomseguroPipe } from './pipes/domseguro.pipe';
 // import { SpottifyService } from './services/spottify.service';
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { LoadingComponent } from './components/shared/loading/loading.component'
     NavbarComponent,
     NoimagePipe,
     TarjetasComponent,
-    LoadingComponent
+    LoadingComponent,
+    DomseguroPipe
   ],
   imports: [
     BrowserModule,
