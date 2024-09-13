@@ -19,15 +19,17 @@ export class HomeComponent {
     this.spotify.getNewReleases().subscribe((data:any) =>{
       this.nuevasCanciones = data;
       this.loading = false;
-    },// el subscribe tiene dos opciones, antes de esta coma , es lo que se ejecuta en el servidor  cuando no hay ningún error, y lo que viene después de la coma es el manejo de errores, que es lo que viene después de este comentario.
-     (errorServicio)=>{
+    },// el subscribe tiene dos opciones, antes de esta coma , es lo que
+      // se ejecuta en el servidor  cuando no hay ningún error, y lo que
+      // viene después de la coma es el manejo de errores, que es lo que viene 
+      // después de este comentario.
+    (errorServicio)=>{
       this.loading = false;
       this.error = true
       console.log(errorServicio.error.error.message);
       this.mensajeError = errorServicio.error.error.message;
     });
     
-   }
-
+  }
 
 }

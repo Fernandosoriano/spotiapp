@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import {ActivatedRoute} from '@angular/router'
 import { SpottifyService } from 'src/app/services/spottify.service';
 @Component({
@@ -11,18 +11,18 @@ artista   :any = [];
 topTracks :any = [];
 loading: boolean;
   constructor (private router :ActivatedRoute,
-               private spotify:SpottifyService)
-               {
+              private spotify:SpottifyService)
+              {
                 this.router.params.subscribe(params=>{
-                  this.loading = true;
+                this.loading = true;
                 this.getArtista(params.id);
                 this.getTopTracks(params.id);
                 console.log(params.id)
-               })
-   }
+              })
+  }
 
   
-   getArtista(id:string){
+  getArtista(id:string){
     this.loading = true;
 this.spotify.getArtista(id).subscribe(artista=>{
   console.log(artista);

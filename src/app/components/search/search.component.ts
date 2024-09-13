@@ -13,7 +13,7 @@ loading  : boolean;
     
   }
 buscar(termino:string){
-  console.log(termino);
+  console.log('termino', termino);
   this.loading = true;
   this.spotify.getArtistas(termino).subscribe((data:any)=>{
     this.artistas = data;

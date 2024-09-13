@@ -7,7 +7,7 @@ import {Router} from '@angular/router'
 })
 export class TarjetasComponent  {
 @Input() items:any[] = [];
-  constructor(private router: Router) { }
+  constructor(private router: Router) {}
 verArtista(item:any){
 let artistaId;
 if(item.type ==='artist'){
